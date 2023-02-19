@@ -1,0 +1,29 @@
+<div class ="col"> 
+  <h1> Your Dashboard</h1>
+</div>
+
+
+{{#each blogs as |blog| }}
+{{!-- {{> blog-details}}
+ --}}
+  <div class ="row mb-4 blog_posts">
+ 
+    <div class="col-md-7">
+    <h3> {{blog.title}} </h3> 
+    </div>
+       <div class="col-md-5">  
+    <span class="date"> Posted by {{blog.creator}} on {{format_date date_created}} </span>
+   </div>
+ 
+{{!-- <a href="/dashboard"> {{> blog-details}} </a> --}}
+
+{{/each}}
+
+   {{!-- {{#each blogs as |blog|}}
+  
+   {{/each}}   --}}
+
+
+ </div>
+
+  <a href="/dashboard/new"> Add New</a>
