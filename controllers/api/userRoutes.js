@@ -7,7 +7,8 @@ router.post('/', async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
-      req.session.id = userData.id;
+      req.session.user_id = userData.id;
+      req.session.creator = userData.username; 
       req.session.loggedIn = true;
 
       res.status(200).json(userData);
@@ -36,10 +37,12 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect username or password, please try again' });
       return;
     }
-
+    // console.log(userData.id);
     req.session.save(() => {
-      req.session.id = userData.id;
+      req.session.user_id = userData.id;
+      req.session.creator = userData.username; 
       req.session.loggedIn = true;
+
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });

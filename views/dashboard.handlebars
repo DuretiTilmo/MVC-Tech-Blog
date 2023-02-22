@@ -2,28 +2,45 @@
   <h1> Your Dashboard</h1>
 </div>
 
-
 {{#each blogs as |blog| }}
-{{!-- {{> blog-details}}
- --}}
-  <div class ="row mb-4 blog_posts">
- 
-    <div class="col-md-7">
-    <h3> {{blog.title}} </h3> 
-    </div>
-       <div class="col-md-5">  
-    <span class="date"> Posted by {{blog.creator}} on {{format_date date_created}} </span>
-   </div>
- 
-{{!-- <a href="/dashboard"> {{> blog-details}} </a> --}}
 
+  <a onClick= displayForm({{blog.id}}) class ="row mb-4 blog_posts">
+ 
+    <div class="col-12">
+    <h5> {{blog.title}} <span class="date" style="font-size:13px;display:flex;justify-content:flex-end"> {{format_date date_created}} </span> </h5> 
+    </div>
+  </a>
+  <div id= {{blog.id}} style="display: none">   
+    <form class="form edit-form">
+      <h4 class="page-title">Edit Post</h4>
+      <div class="form-group">
+        <label for="post-title">Title</label><br>
+        <input class="form-input" type="text" id="title" value="{{blog.title}}"/>
+      </div>
+      <div class="form-group">
+        <label for="post-content">Content</label></div><br>
+        <input class="form-input" type="text" id="content" value="{{blog.content}}"/><br>
+        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">DELETE</button>
+        <button class="btn btn-primary update" type="submit" id="{{blog.id}}">Update</button>
+         </div>
+    </form>
+    </div> 
 {{/each}}
 
-   {{!-- {{#each blogs as |blog|}}
-  
-   {{/each}}   --}}
 
+  <a href="/dashboard/new" id="button" style="font-size:13px;display:flex;justify-content:center;">
+    <button class="btn btn-md btn-danger" style="font-size:15px;display:flex;" data-id="{{blog.id}}">Add New</button>
+   </a>
 
- </div>
+<script>
 
-  <a href="/dashboard/new"> Add New</a>
+    const displayForm = (id) =>{
+     if (  document.getElementById(id).style.display == "block") {
+       document.getElementById(id).style.display = "none";
+
+     } else {
+        document.getElementById(id).style.display = "block";
+     }
+    }
+</script> 
+  <script src="/js/delete.js"></script>

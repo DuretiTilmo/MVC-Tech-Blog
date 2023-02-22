@@ -1,0 +1,52 @@
+body {
+    font-family: Arial;
+    max-width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    min-height: 100vh;
+    justify-content: center;
+    background-color: rgb(221, 221, 221);
+  }
+nav {
+background-color: rgb(5, 5, 70);
+height: 50px;
+padding: 20px;
+}
+
+nav a {
+color: rgb(218, 215, 215);
+font-size: 15px;
+padding: 50px;
+
+}
+h5 {
+    color: darkblue;
+    background-color: azure;
+    padding: 20px;
+}
+
+#button {
+    background-color: rgb(36, 36, 85);
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    /* display: flex; */
+    /* justify-content: flex-end; */
+}
+
+.edit-form {
+    background-color: rgb(248, 245, 245);
+    width: 600px;
+
+}
+
+.edit-form .page-title {
+    background-color: rgb(36, 36, 85);
+    color: white;
+    padding: 10px;
+}
+
+.edit-form .form-input {
+    width: 500px;
+    height: 50px;
+}
