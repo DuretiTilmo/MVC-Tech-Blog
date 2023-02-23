@@ -6,7 +6,6 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
-
 // Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -25,7 +24,6 @@ const sess = {
     db: sequelize
   })
 };
-
 
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
