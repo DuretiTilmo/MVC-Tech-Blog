@@ -13,9 +13,15 @@ This app is a blog site where developers can publish their blog posts and commen
 --------------------------------------
 
 ## Links
-   Deployed App => 
+   Deployed App => https://still-castle-11167.herokuapp.com/
 
 ## Screenshots
+
+![Alt text](images/Screenshot_20230223_122215.png)
+
+![Alt text](images/Screenshot_20230223_122242.png)
+
+![Alt text](images/Screenshot_20230223_122303.png)
 
 ## Installaion
 

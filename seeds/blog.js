@@ -15,13 +15,7 @@ const blogs = [
    date_created: new Date(),
   
   },
-  {
-   title: 'Object-Relational Mapping',
-   content: 'I have already loved learning about ORMs. It has really simplified the way I create queries in SQL!',
-   creator: 'Lernantino',
-   date_created: new Date(),
 
-  },
 ];
 
 const seedBlog = () => Blog.bulkCreate(blogs);
