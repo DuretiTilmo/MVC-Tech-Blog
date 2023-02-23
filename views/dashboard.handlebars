@@ -4,7 +4,7 @@
 
 {{#each blogs as |blog| }}
 
-  <a onClick= displayForm({{blog.id}}) class ="row mb-4 blog_posts">
+  <a onClick= displayForm({{blog.id}}) class ="col-lg-6 mb-4 blog_posts">
  
     <div class="col-12">
     <h5> {{blog.title}} <span class="date" style="font-size:13px;display:flex;justify-content:flex-end"> {{format_date date_created}} </span> </h5> 
@@ -29,7 +29,7 @@
 
 
   <a href="/dashboard/new" id="button" style="font-size:13px;display:flex;justify-content:center;">
-    <button class="btn btn-md btn-danger" style="font-size:15px;display:flex;" data-id="{{blog.id}}">Add New</button>
+    <button class="btn btn-md btn-danger" style="font-size:15px;" data-id="{{blog.id}}">Add New</button>
    </a>
 
 <script>
